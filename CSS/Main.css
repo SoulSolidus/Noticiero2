@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Lobster&family=Noto+Sans+JP&display=swap');
+
+/*
+font-family: 'Bree Serif', serif;
+font-family: 'Lobster', cursive;
+font-family: 'Noto Sans JP', sans-serif;
+*/
+
+*{
+    margin: 0px;
+    padding: 0px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: 0px;
+    box-sizing: border-box;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+*::selection{
+    background-color: rgb(6, 140, 0);
+    color: white;
+    text-shadow: 1px 1px #000;
+}
+
+.menu_bar {
+	display:none;
+}
+
+header {
+	width: 100%;
+}
+
+header nav {
+	background: rgb(40, 118, 34);
+	z-index:1000;
+	max-width: 2000px;
+	width:100%;
+	margin:0px auto;
+	transition:all .5s ease; 
+}
+
+header nav li:active {
+	background:rgba(114, 179, 0, .3);
+	box-shadow:inset 0px 3px 2px rgba(0,0,0,1);
+}
+
+header nav ul {
+	list-style:none;
+	text-align:center;
+}
+
+header nav ul li {
+	display:inline-block;
+	position: relative;
+}
+
+header nav ul li:hover {
+	background: rgb(162, 62, 72);
+}
+
+header nav ul li a {
+	color:#fff;
+	display:block;
+	text-decoration:none;
+    padding: 20px;
+    font-family: 'Bree Serif', serif;
+    font-weight: lighter;
+    font-size: 25px;
+    letter-spacing: 1px;
+}
+
+header nav ul li a span {
+	margin-right:10px;
+}
+
+header nav ul li:hover .children {
+	display:block;
+}
+
+header nav ul li .children {
+	display: none;
+	background:rgb(114, 179, 0);
+	position: absolute;
+	width: 150%;
+	z-index:1000;
+}
+
+header nav ul #Marca .children {
+    width: 250%;
+}
+
+header nav ul li .children li {
+	display:block;
+	overflow: hidden;
+	border-bottom: 1px solid rgba(255,255,255,.5);
+}
+
+header nav ul li .children li a {
+	display: block;
+}
+
+header nav ul li .children li a span {
+	float: right;
+	position: relative;
+	top:3px;
+	margin-right:0;
+	margin-left:10px;
+}
+
+header nav ul li .caret {
+	position: relative;
+	top:3px;
+	margin-left:10px;
+	margin-right:0px;
+}
+
+@media screen and (max-width: 800px) {
+	body {
+		padding-top:80px;
+	}
+
+	.menu_bar {
+		display:block;
+		width:100%;
+		position: fixed;
+		top:0;
+		background:#E6344A;
+	}
+
+	.menu_bar .bt-menu {
+		display: block;
+		padding: 20px;
+		color: #fff;
+		overflow: hidden;
+		font-size: 25px;
+		font-weight: bold;
+		text-decoration: none;
+	}
+
+	.menu_bar span {
+		float: right;
+		font-size: 40px;
+	}
+
+	header nav {
+		width: 80%;
+		height: calc(100% - 80px);
+		position: fixed;
+		right:100%;
+		margin: 0;
+		overflow: scroll;
+	}
+
+	header nav ul li {
+		display: block;
+		border-bottom:1px solid rgba(255,255,255,.5);
+	}
+
+	header nav ul li a {
+		display: block;
+	}
+
+	header nav ul li:hover .children {
+		display: none;
+	}
+
+	header nav ul li .children {
+		width: 100%;
+		position: relative;
+	}
+
+	header nav ul li .children li a {
+		margin-left:20px;
+	}
+
+	header nav ul li .caret {
+		float: right;
+	}
+}
+
+/*------Propiedades de los div--------------*/
+
+.header{
+    height: 300px;
+    margin: 10px;
+    width: 100%;
+	position: relative;
+	background-image: url("../IMG/PCMasterRace2.jpg");
+	background-position: center; /* Center the image */
+	background-repeat: no-repeat; /* Do not repeat the image */
+	background-size: cover;
+	/*
+    background: rgb(6,140,0);
+    background: -moz-linear-gradient(135deg, rgba(6,140,0,1) 35%, rgba(222,6,55,1) 100%);
+    background: -webkit-linear-gradient(135deg, rgba(6,140,0,1) 35%, rgba(222,6,55,1) 100%);
+    background: linear-gradient(135deg, rgba(6,140,0,1) 35%, rgba(222,6,55,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#068c00",endColorstr="#de0637",GradientType=1);
+	*/
+}
+
+.header>h1{
+    font-size: 50px;
+    font-family: 'Lobster', cursive;
+    color: white;
+    text-align: center;
+    word-spacing: 10em;
+    /*centrar un texto dentro de un div*/
+    position: relative;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    /*--------------------------------*/
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 5px;
+    margin: 20px 20px 20px 20px;
+	background-color: #f5fbf9;
+}
+  
+.grid-container > div {
+    background-color: #f5fbf9;
+    text-align: left;
+	font-size: 20px;
+	padding:  20px 20px 20px 20px;
+}
+   
+.item1{
+    background-color: #f5fbf9;
+    grid-row-start: 1;
+	grid-row-end: 2;
+	border-bottom: 1px solid #000;
+}
+
+.item2{
+	grid-column-start: 2;
+	grid-column-end: 4;
+	border-bottom: 1px solid #000;
+}
+
+.item3{
+	border-bottom: 1px solid #000;
+}
+
+.item5{
+	grid-row-start: 3;
+	grid-row-end: 3;
+	grid-column-start: 1;
+	grid-column-end: 3;
+	
+}
+
+Nvidia{
+    color: #068c00;
+}
+
+AMD{
+    color: #de0637;
+}
+
+
+h1{
+    font-size: 35px;
+}
+
+h2{
+    font-size: 25px;
+}
+
+p{
+    font-size: 18px;
+    word-spacing: 1px;
+    line-height: 30px;
+}
+
+/*
+
+https://www.youtube.com/watch?v=fy-tubbJ2Vo
+https://www.youtube.com/watch?v=LjOPweJU8eU
+https://www.youtube.com/watch?v=tTlWjLhqfKk
+*/
