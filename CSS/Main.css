@@ -21,6 +21,10 @@ font-family: 'Noto Sans JP', sans-serif;
     text-shadow: 1px 1px #000;
 }
 
+body{
+	background-color: #f5fbf9;
+}
+
 .menu_bar {
 	display:none;
 }
@@ -244,12 +248,17 @@ header nav ul li .caret {
 	border-bottom: 1px solid #000;
 }
 
+.item4{
+	border-bottom: 1px solid #000;
+}
+
 .item5{
-	grid-row-start: 3;
-	grid-row-end: 3;
 	grid-column-start: 1;
 	grid-column-end: 3;
-	
+}
+
+.item5>h1{
+	padding-bottom: 20px;
 }
 
 Nvidia{
@@ -273,6 +282,19 @@ p{
     font-size: 18px;
     word-spacing: 1px;
     line-height: 30px;
+}
+
+footer{
+	background-color: #de0637;
+	text-align: center;
+	padding: 10px;
+	margin: 10px;
+}
+
+footer>p{
+	margin: 10px;
+	padding: 10px;
+	color: #fff;
 }
 
 /*
